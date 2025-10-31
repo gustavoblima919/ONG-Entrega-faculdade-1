@@ -1,0 +1,200 @@
+/* ==============================
+   SISTEMA DE DESIGN
+   ============================== */
+
+/*Cores (8 cores) */
+:root {
+  --cor-primaria: #1a73e8;
+  --cor-secundaria: #ff9800;
+  --cor-sucesso: #4caf50;
+  --cor-erro: #f44336;
+  --cor-alerta: #ffeb3b;
+  --cor-texto: #333333;
+  --cor-fundo: #f5f5f5;
+  --cor-branco: #ffffff;
+
+  /*Tipografia (5 tamanhos) */
+  --fonte-pequena: 12px;
+  --fonte-normal: 16px;
+  --fonte-media: 20px;
+  --fonte-grande: 28px;
+  --fonte-titulo: 36px;
+
+  /*Espaçamento (modular) */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+}
+
+/* ==============================
+   Estilo
+   ============================== */
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  padding: var(--esp-2);
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: var(--cor-primaria);
+}
+
+main {
+  padding: var(--esp-3);
+}
+
+/* ==============================
+   Navegação
+   ============================== */
+
+nav {
+  background-color: var(--cor-secundaria);
+  padding: var(--esp-2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 var(--esp-2);
+  position: relative;
+}
+
+nav a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Submenu dropdown */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-secundaria);
+  padding: var(--esp-2);
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+/* ==============================
+   Layout
+   ============================== */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--esp-2);
+}
+
+.card {
+  background-color: var(--cor-branco);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: var(--esp-3);
+  text-align: center;
+  grid-column: span 4;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ==============================
+   Formulário
+   ============================== */
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background-color: var(--cor-branco);
+  padding: var(--esp-3);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: var(--esp-2);
+  margin-bottom: var(--esp-2);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: var(--cor-primaria);
+}
+
+/* ==============================
+   Botões
+   ============================== */
+
+button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border: none;
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--fonte-normal);
+}
+
+button:hover {
+  background-color: #155ab6;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 1200px) {
+  .card { grid-column: span 6; }
+}
+
+@media (max-width: 900px) {
+  .card { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: var(--fonte-grande); }
+  main { padding: var(--esp-2); }
+}
