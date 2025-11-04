@@ -1,12 +1,12 @@
-# ONG Portão do ÉDÉN
-Incentivado pela faculdade fiz um pequeno projeto de ONG totalmente fictício! A ideia é simples, e se baseia em alguns vários fatores sociais, o projeto foi focado em ações escolares e demais coisas para fim de aprendizagem. 
+# Projeto ONG Portão do ÉDÉN
+Este projeto foi feito durante meu primeiro semestre da faculdade de ADS. A aplicação simula um Site institucional de cadastro para pessoas que queiram participar da ONG, possui cadastro, uma "galeria de projetos", e interatividade via Java
 
-Tecnologias usadas 😎
+Tecnologias usadas:
 HTML
 CSS
 JavaScript
 
-Funcionalidades: 👌
+Funcionalidades:
 Formulário de validação
 Projetos
 Inicio 
@@ -19,3 +19,7 @@ Acessibilidades:
 Estrutura Semântica
 Alto contraste e modo escuro
 
+Link direto para o projeto: https://github.com/gustavoblima919/ONG-Entrega-faculdade-1
+
+Autor: Gustavo Bueno.
+Aluno no 1°Semestre da faculdade de ADS
